@@ -6,6 +6,7 @@ let max = 100;
 const firstComputer = () => {
   if (guess === 0) {
     number = Math.floor(Math.random() * (max - min + 1)) + min;
+    //Типа компьютер генерирует, так-то ясно, что генерация была бы корректнее снаружи выше
     console.log(`Компьютер 1 загадал число: ${number}`);
     return null;
   } else if (guess > number)
@@ -21,7 +22,7 @@ const firstComputer = () => {
   else return "Компьютер 1: Угадал!";
 };
 
-const secondComputer = (direction = null) => {
+const secondComputer = (direction) => {
   if (!direction) {
     guess = Math.floor((min + max) / 2);
   } else if (direction === "Меньше.") {
