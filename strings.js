@@ -13,7 +13,4 @@ const setLimit = (string, limit) => {
   return string;
 };
 
-const isSubstr = (s1, s2) => {
-  if (s1.includes(s2) || s2.includes(s1)) return true;
-  return false;
-};
+const isSubstr = (s1, s2) => s1.includes(s2) || s2.includes(s1);
